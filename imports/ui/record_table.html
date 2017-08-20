@@ -1,0 +1,44 @@
+<template name="record_table">
+    <div class="record_table">
+        <header>
+            <h2>Game Records ({{recordCount}})</h2>
+            <button class="new_record">Add</button>
+            <button class="remove_record">Remove</button>
+            <div class="table_wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Winner</th>
+                            <th></th>
+                            <th>-</th>
+                            <th></th>
+                            <th>Loser</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </header>
+        <div class="table_wrapper records">
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#transition in="zoomIn:200" out="zoomOut:200"}}
+                        {{#each records}} {{> record}} {{/each}}
+                    {{/transition}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

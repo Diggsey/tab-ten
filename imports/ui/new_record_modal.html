@@ -1,0 +1,21 @@
+
+<template name="new_record_modal">
+    <div class="new_record_modal">
+        <span>Winner</span>
+        <span>Scores</span>
+        <span>Loser</span>
+        <div class="players_list winner">
+            {{#each players}}
+                <div class="player {{playerClass 'winner'}}">{{name}}</div>
+            {{/each}}
+            <input class="player {{newPlayerClass 'winner'}}" type="text" placeholder="New Player" />
+        </div>
+        New Record
+        <div class="players_list loser">
+            {{#each players}}
+                <div class="player {{playerClass 'loser'}}">{{name}}</div>
+            {{/each}}
+            <input class="player {{newPlayerClass 'loser'}}" type="text" placeholder="New Player" />
+        </div>
+    </div>
+</template>

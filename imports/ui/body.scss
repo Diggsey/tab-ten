@@ -1,0 +1,74 @@
+@import "./colors.scss";
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: $color-mid;
+
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr;
+
+    .title {
+        background-color: $color-dark;
+        color: $color-light;
+        text-align: center;
+        padding: 10px;
+        font-size: 24px;
+
+        &::after {
+            content: "™";
+        }
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        .login {
+            grid-column-start: -1;
+            background-color: $color-focus;
+            color: $color-dark;
+            display: grid;
+            padding: 10px;
+        }
+
+        #login-buttons {
+            margin: auto;
+        }
+    }
+
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        color: $color-light;
+        align-items: stretch;
+        padding: 0px;
+        margin: 0px;
+        padding-right: 1px;
+
+        &>li {
+            background-color: $color-dark;
+            margin: 1px 0px 0px 1px;
+            cursor: pointer;
+            display: grid;
+            flex-grow: 1;
+            
+            &>span {
+                margin: auto 0px;
+                padding: 5px 15px;
+                text-align: center;
+            }
+
+            &:hover {
+                background-color: $color-strong;
+            }
+        }
+    }
+}

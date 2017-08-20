@@ -1,0 +1,18 @@
+@import "./colors.scss";
+
+.record.selected {
+    background-color: $color-strong;
+    color: $color-light;
+    &:hover {
+        background-color: $color-strong;        
+    }
+}
+
+.record:hover {
+    cursor: default;
+    background-color: $color-light;
+}
+
+.record.dragover {
+    background-color: $color-light;
+}

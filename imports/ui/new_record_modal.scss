@@ -1,0 +1,30 @@
+@import "./colors.scss";
+
+.new_record_modal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .players_list {
+        min-height: 200px;
+        overflow-y: auto;
+        background-color: $color-focus;
+
+        div {
+            padding: 5px;
+            cursor: default;
+            &.selected {
+                background-color: $color-strong;
+                color: $color-light;
+            }
+        }
+        input {
+            padding: 5px;
+            border: none;
+            background-color: inherit;
+            &.selected {
+                background-color: $color-strong;
+                color: $color-light;
+            }
+        }
+    }
+}

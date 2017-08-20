@@ -1,0 +1,55 @@
+@import "./colors.scss";
+
+.record_table {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow: hidden;
+    background-color: $color-light;
+
+    .table_wrapper {
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    table {
+        table-layout: fixed;
+        border-spacing: 0;
+        width: 100%;
+    }
+
+    header {
+        thead {
+            font-weight: bold;
+            border-bottom: 2px solid $color-dark;
+        }
+    }
+
+    tbody {
+        background-color: $color-focus;
+    }
+
+    .records th {
+        border: none;
+        padding: 0;
+    }
+
+    td, th {
+        text-align: center;
+        overflow: hidden;
+    }
+    th:nth-child(1) { width: 10%; }
+    th:nth-child(2) { width: 20%; }
+    th:nth-child(3) { width: 10%; }
+    th:nth-child(4) { width: 5%; }
+    th:nth-child(5) { width: 10%; }
+    th:nth-child(6) { width: 20%; }
+    th:nth-child(7) { width: 25%; }
+    td:nth-child(2), th:nth-child(2),
+    td:nth-child(3), th:nth-child(3) {
+        text-align: right;
+    }
+    td:nth-child(5), th:nth-child(5),
+    td:nth-child(6), th:nth-child(6) {
+        text-align: left;
+    }
+}

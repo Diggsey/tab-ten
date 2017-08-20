@@ -1,0 +1,45 @@
+@import "./colors.scss";
+
+.modal_bg {
+    background-color: rgba(black, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+.modal_outer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: grid;
+}
+
+.modal_dialog {
+    background-color: $color-mid;
+    border: 1px solid $color-light;
+    margin: auto;
+    display: grid;
+    min-width: 300px;
+
+    h3 {
+        display: block;
+        margin: 0px;
+        padding: 15px;
+        background-color: $color-dark;
+        color: $color-light;
+    }
+
+    .modal_container {
+        margin: 15px;
+    }
+
+    .modal_buttons {
+        margin: 15px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}

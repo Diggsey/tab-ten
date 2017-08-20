@@ -1,0 +1,43 @@
+<template name="modals">
+    {{#transition in="fadeIn:200" out="fadeOut:200" wrap="true"}}
+        {{#each modals}}
+            <div class="modal_bg" style="z-index:{{@index}}"></div>
+        {{/each}}
+    {{/transition}}
+    {{#transition in="zoomIn:200" wrap="true"}}
+        {{#each modals}}
+            <div class="modal_outer" style="z-index:{{@index}}">
+                <div class="modal_dialog">
+                    <h3>{{title}}</h3>
+                    <div class="modal_container">
+                        {{> Template.dynamic template=modalTemplate}}
+                    </div>
+                    <div class="modal_buttons">
+                        {{#each buttons}}
+                            <button name="{{result}}">{{text}}</button>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    {{/transition}}
+</template>
+
+<template name="hello_modal">
+    Hello, world!<br/>
+    This<br/>
+    Is<br/>
+    A<br/>
+    Big<br/>
+    Dialog<br/>
+</template>
+
+<template name="hello_modal2">
+    This<br/>
+    Is<br/>
+    Smaller<br/>
+</template>
+
+<template name="hello_modal3">
+    Hello, world!
+</template>
