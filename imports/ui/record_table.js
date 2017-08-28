@@ -27,18 +27,22 @@ Template.record_table.events({
             title: 'Add Record',
             winner: Session.get('defaultWinner') || '',
             loser: Session.get('defaultLoser') || '',
+            winnerScore: Session.get('defaultWinnerScore') || 0,
+            loserScore: Session.get('defaultLoserScore') || 0,
             callback() {
                 if (this.result != 'ok')
                     return;
 
                 Session.set('defaultWinner', this.winner);
                 Session.set('defaultLoser', this.loser);
+                Session.set('defaultWinnerScore', parseInt(this.winnerScore));
+                Session.set('defaultLoserScore', parseInt(this.loserScore));
 
                 Meteor.call('records.add', {
                     winner: this.winner,
-                    winnerScore: 11,
+                    winnerScore: parseInt(this.winnerScore),
                     loser: this.loser,
-                    loserScore: 0
+                    loserScore: parseInt(this.loserScore)
                 });
             }
         });

@@ -34,9 +34,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{#transition in="zoomIn:200" out="zoomOut:200"}}
-                        {{#each records}} {{> record}} {{/each}}
-                    {{/transition}}
+                    {{#each records}} {{> record}} {{/each}}
                 </tbody>
             </table>
         </div>

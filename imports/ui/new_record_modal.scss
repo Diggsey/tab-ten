@@ -2,7 +2,39 @@
 
 .new_record_modal {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.5fr 1px 0.5fr 1fr;
+    grid-column-gap: 10px;
+    justify-items: center;
+    align-items: center;
+
+    h4 {
+        color: $color-light;
+        text-align: center;
+        &:nth-child(2) {
+            grid-column-end: span 3;
+        }
+    }
+
+    .vline {
+        justify-self: stretch;
+        align-self: stretch;
+        border-left: 1px dashed $color-light;
+    }
+
+    input.score {
+        font-size: 30px;
+        width: 50px;
+        background-color: $color-focus;
+        border: none;
+    }
+
+    input {
+        text-align: inherit;
+    }
+
+    .winner {
+        text-align: right;
+    }
 
     .players_list {
         min-height: 200px;

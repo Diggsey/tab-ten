@@ -1,0 +1,13 @@
+<template name="facet_panel">
+    <div class="facet_panel">
+        {{#each facets}}
+            {{> facet_panel_graph}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="facet_panel_graph">
+    <div class="facet_panel_graph">
+        <canvas></canvas>
+    </div>
+</template>

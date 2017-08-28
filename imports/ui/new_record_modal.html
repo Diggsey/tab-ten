@@ -1,16 +1,18 @@
 
 <template name="new_record_modal">
     <div class="new_record_modal">
-        <span>Winner</span>
-        <span>Scores</span>
-        <span>Loser</span>
+        <h4>Winner</h4>
+        <h4>Scores</h4>
+        <h4>Loser</h4>
         <div class="players_list winner">
             {{#each players}}
                 <div class="player {{playerClass 'winner'}}">{{name}}</div>
             {{/each}}
             <input class="player {{newPlayerClass 'winner'}}" type="text" placeholder="New Player" />
         </div>
-        New Record
+        <input class="score winner" type="number" min="0" value="{{winnerScore}}" />
+        <div class="vline"></div>
+        <input class="score loser" type="number" min="0" value="{{loserScore}}" />
         <div class="players_list loser">
             {{#each players}}
                 <div class="player {{playerClass 'loser'}}">{{name}}</div>

@@ -43,5 +43,11 @@ Template.new_record_modal.events({
     },
     'mousedown .loser input'(ev, t) {
         updateModal(t.data, 'loser', ev.target.value);
+    },
+    'input input.winner.score'(ev, t) {
+        updateModal(t.data, 'winnerScore', ev.target.value);
+    },
+    'input input.loser.score'(ev, t) {
+        updateModal(t.data, 'loserScore', ev.target.value);
     }
 });
